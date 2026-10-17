@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<h2>Каталог заданий</h2>{% for c in challenges %}<article><h3><a href="/challenges/{{c.id}}">{{c.title}}</a></h3><small>{{c.category}} · {{c.difficulty}} · {{c.points}} баллов</small><p>{% if c.id in solved_ids %}✅ Решено{% else %}Открыто{% endif %}</p></article>{% else %}<p>Опубликованных заданий пока нет.</p>{% endfor %}{% endblock %}

@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<h2>Рейтинг</h2><table cellpadding="12"><tr><th>Место</th><th>Участник</th><th>Баллы</th><th>Последнее решение (UTC)</th></tr>{% for s in scores %}<tr><td>{{loop.index}}</td><td>{{s.username}}</td><td>{{s.score}}</td><td>{{s.last_solve or '—'}}</td></tr>{% endfor %}</table>{% endblock %}

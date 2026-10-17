@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<section><h2>Профиль {{user.username}}</h2><p>Баллы: <b>{{score}}</b> · Решено: {{solved|length}}</p>{% for s in solved %}<p>✅ {{s.title}} — {{s.points}} баллов</p>{% endfor %}</section>{% endblock %}
